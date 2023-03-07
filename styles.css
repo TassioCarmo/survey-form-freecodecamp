@@ -1,84 +1,44 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
 
-/*colors that will be used*/
-
 :root {
-    --color-white: #f3f3f3;
-    --color-darkblue: #1b1b32;
-    --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+    --color-white: #ffffff;
+    --color-darkblue-alpha: rgba(154, 153, 151, 0.549);
     --color-green: #37af65;
 }
 
-*,
-::before,
-::after {
-    box-sizing: border-box;
-}
-
-/*font used in the page*/
-
 body {
     font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
     font-weight: 400;
-    line-height: 1.4;
     color: var(--color-white);
     margin: 0;
+    background-image: linear-gradient(115deg, rgba(1, 1, 23, 0.8),
+            rgba(46, 46, 50, 0.7)),
+        url(https://res.cloudinary.com/practicaldev/image/fetch/s--9YIHYb-S--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://thepracticaldev.s3.amazonaws.com/i/64axiiy4wwz3x7emd7c2.png);
+
 }
 
-/*Background image*/
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    background: var(--color-darkblue);
-    background-image: linear-gradient(115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7)), url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+#title,
+#description {
+    text-align: center;
 }
 
-
-
-/*header*/
-
-h1 {
-    font-weight: 400;
-    line-height: 1.2;
+#title {
+    margin-top: 3rem;
 }
 
-/*Paragraph*/
-
-p {
-    font-size: 1.125rem;
+#description {
+    font-style: italic;
 }
 
-h1,
-p {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-}
 
 label {
     display: flex;
-    align-items: center;
-    font-size: 1.125rem;
-    margin-bottom: 0.5rem;
 }
 
-input,
-button,
-select,
-textarea {
-    margin: 0;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
+div input{
+    display: inline-block;
 }
+
 
 button {
     border: none;
@@ -95,33 +55,6 @@ button {
     }
 }
 
-@media (min-width: 768px) {
-    .container {
-        max-width: 720px;
-    }
-}
-
-.header {
-    padding: 0 0.625rem;
-    margin-bottom: 1.875rem;
-}
-
-.description {
-    font-style: italic;
-    font-weight: 200;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-}
-
-.clue {
-    margin-left: 0.25rem;
-    font-size: 0.9rem;
-    color: #e4e4e4;
-}
-
-.text-center {
-    text-align: center;
-}
-
 /* form */
 
 form {
@@ -130,45 +63,36 @@ form {
     border-radius: 0.25rem;
 }
 
+/*input*/
+
+
+.form-control {
+    width: 100%;
+    height: 2rem;
+    margin-bottom: 0.5rem;
+}
+
 @media (min-width: 480px) {
     form {
         padding: 2.5rem;
     }
 }
 
-.form-group {
-    margin: 0 auto 1.25rem auto;
-    padding: 0.25rem;
-    width: 100%;
-}
 
-.form-control {
-    display: block;
-    width: 100%;
-    height: 2.375rem;
-    padding: 0.375rem 0.75rem;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: 0.25rem;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
-
-.input-radio,
-.input-checkbox {
+.checkbox-input{
     display: inline-block;
-    margin-right: 0.625rem;
-    min-height: 1.25rem;
-    min-width: 1.25rem;
 }
 
-.input-textarea {
+
+
+#additional-comments{
+    margin-bottom: 0.2rem;
     min-height: 120px;
     width: 100%;
     padding: 0.625rem;
     resize: vertical;
+    margin-bottom: 1rem;
+    
 }
 
 .submit-button {
@@ -178,7 +102,5 @@ form {
     background: var(--color-green);
     color: inherit;
     border-radius: 2px;
-    cursor: pointer;
+    cursor: pointer;  
 }
-
-
